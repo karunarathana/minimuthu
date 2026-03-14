@@ -6,6 +6,8 @@ import Footer from "../(components)/FooterComponent";
 import Header from "../(components)/Header";
 import HeroSection from "../(components)/HeroSection";
 import UserReviews from "../(components)/ReviewComponent";
+import ChefComponent from "../(components)/ChefComponent";
+import WelcomeComponent from "../(components)/WelcomeComponent";
 
 export default function HomePage() {
     return (
@@ -63,7 +65,7 @@ export default function HomePage() {
                     {/* Section Header */}
                     <div className="text-center mb-12 mt-12">
                         <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                            Why Are <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">With Difference ?</span>
+                            Our Special <span className="bg-gradient-to-r from-amber-500 to-orange-500 bg-clip-text text-transparent">Dishes</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
                             Dont just take our word for it - hear from our satisfied customers about their dining experience
@@ -96,6 +98,12 @@ export default function HomePage() {
                         />
 
                     </div>
+                </div>
+                <div className="mt-4">
+                    <WelcomeComponent/>
+                </div>
+                <div className="mt-4">
+                    <ChefComponent/>
                 </div>
                 <div className="mt-4">
                     <UserReviews />
