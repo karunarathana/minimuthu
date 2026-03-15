@@ -1,6 +1,7 @@
 // components/HeaderSimple.tsx
 'use client';
 
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FaUtensils } from 'react-icons/fa';
 
@@ -20,12 +21,16 @@ const Header = () => {
           </Link>
 
           {/* Welcome Message */}
-          <div className="flex items-center space-x-2">
+          <motion.div className="flex items-center space-x-2"
+            initial={{ opacity: 0, x: +50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8}}
+          >
             <p className="text-[1.3rem] font-bold text-gray-700">Menu</p>
             <p className="text-[1.3rem] font-bold text-gray-700">Event</p>
             <p className="text-[1.3rem] font-bold text-gray-700">Galary</p>
             <p className="text-[1.3rem] font-bold text-gray-700">Contact</p>
-          </div>
+          </motion.div>
 
           {/* Empty div for spacing */}
           <div className="w-20">
