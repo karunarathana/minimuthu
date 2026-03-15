@@ -8,6 +8,8 @@ import HeroSection from "../(components)/HeroSection";
 import UserReviews from "../(components)/ReviewComponent";
 import ChefComponent from "../(components)/ChefComponent";
 import WelcomeComponent from "../(components)/WelcomeComponent";
+import LatestBlog from "../(components)/LatestBlogComponent";
+import BookingSection from "../(components)/BookingSectionComponent";
 
 export default function HomePage() {
     return (
@@ -46,7 +48,7 @@ export default function HomePage() {
                     <motion.div className="mt-2 flex flex-col items-center justify-center gap-2 md:flex-row"
                         initial={{ opacity: 0, x: 500 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1 }}
                     >
                         <motion.div
                             whileHover={{
@@ -116,7 +118,7 @@ export default function HomePage() {
                     <motion.div className="mt-2 flex flex-col items-center justify-center gap-2 md:flex-row"
                         initial={{ opacity: 0, x: -500 }}
                         whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
+                        transition={{ duration: 1 }}
                     >
                         <motion.div
                             whileHover={{
@@ -169,6 +171,9 @@ export default function HomePage() {
 
                     </motion.div>
                 </div>
+                <div>
+                    <LatestBlog/>
+                </div>
                 <div className="mt-4">
                     <WelcomeComponent />
                 </div>
@@ -176,18 +181,21 @@ export default function HomePage() {
                     <ChefComponent />
                 </div>
                 <motion.div className="mt-4"
-                    animate={{
-                        x: [0, 50, 0, -50, 0],
-                        y: [0, -50, -100, -50, 0]
-                    }}
-                    transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        ease: "linear"
-                    }}
+                    // animate={{
+                    //     x: [0, 50, 0, -50, 0],
+                    //     y: [0, -50, -100, -50, 0]
+                    // }}
+                    // transition={{
+                    //     duration: 10,
+                    //     repeat: Infinity,
+                    //     ease: "linear"
+                    // }}
                 >
                     <UserReviews />
                 </motion.div>
+                <div>
+                    <BookingSection/>
+                </div>
                 <div className="mt-4">
                     <Footer />
                 </div>
